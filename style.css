@@ -1,0 +1,416 @@
+/* -------reset------ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: #001e4d;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --blueviolet: rgb(43, 162, 226);
+  --white: #fff;
+  --aqua: aqua;
+  --red: rgb(255, 25, 0);
+}
+
+.container {
+  text-align: center;
+  margin: 2rem;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .3rem;
+}
+
+#newText {
+  width: 25rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+  padding: .1rem;
+}
+
+.error {
+  border: .125rem solid var(--red);
+  color: var(--red);
+}
+
+.show {
+  display: flex;
+}
+
+#todo-list {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.listItem {
+  width: 27rem;
+  background: white;
+  list-style: none;
+  margin: 0.2rem 0;
+  padding: 0.3rem;
+  border: .0625rem solid;
+  border-radius: .1875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .0625rem;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.fixedItem {
+  text-decoration: line-through;
+}
+
+
+.iconContainer {
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#addbtn {
+  background-color: var(--blueviolet);
+  color: var(--white);
+  cursor: pointer;
+  border: .3125rem solid var(--blueviolet);
+  border-radius: .1875rem;
+  margin-left: .5rem;
+}
+
+#addbtn:hover {
+  transform: scale(1.1);
+}
+
+.plus.icon {
+  color: white;
+  position: relative;
+  width: .9375rem;
+  min-width: .9375rem;
+  height: 1.25rem;
+  overflow: hidden;
+}
+
+.plus.icon:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .5625rem;
+  width: .875rem;
+  height: .125rem;
+  background-color: currentColor;
+}
+
+.plus.icon:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .5625rem;
+  width: .875rem;
+  height: .125rem;
+  background-color: currentColor;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.deleteBtn {
+  background-color: var(--red);
+  border: none;
+  border-radius: .1875rem;
+  cursor: pointer;
+  margin: 0 .1rem;
+}
+
+.deleteBtn:hover {
+  transform: scale(1.1);
+}
+
+.trash-solid.icon {
+  color: hsl(0, 8%, 95%);
+  position: absolute;
+  margin-left: auto;
+  width: .5625rem;
+  height: .625rem;
+  border-left: solid .0625rem currentColor;
+  border-right: solid .0625rem currentColor;
+  border-bottom: solid .0625rem currentColor;
+  border-radius: 0 0 .125rem .125rem;
+  background-color: currentColor;
+}
+
+.trash-solid.icon:before {
+  content: '';
+  position: absolute;
+  left: -.25rem;
+  top: 0rem;
+  width: 1.0625rem;
+  height: .0625rem;
+  background-color: currentColor;
+}
+
+.trash-solid.icon:after {
+  content: '';
+  position: absolute;
+  left: -.0625rem;
+  top: -.1875rem;
+  width: .5625rem;
+  height: .125rem;
+  border-left: solid .0625rem currentColor;
+  border-right: solid .0625rem currentColor;
+  border-top: solid .0625rem currentColor;
+  background-color: currentColor;
+  border-radius: .25rem .25rem 0 0;
+}
+
+.important {
+  color: var(--aqua);
+}
+
+.importantBtn {
+  background-color: var(--aqua);
+  border: none;
+  border-radius: .1875rem;
+  cursor: pointer;
+}
+
+.importantBtn:hover {
+  transform: scale(1.1);
+}
+
+.paperclip.icon {
+  color: #000;
+  position: absolute;
+  margin-left: auto;
+  width: .375rem;
+  height: 1.0625rem;
+  border-radius: .8125rem .75rem 0 0;
+  border-left: solid .0625rem currentColor;
+  border-right: solid .0625rem currentColor;
+  border-top: solid .0625rem currentColor;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.paperclip.icon:before {
+  content: '';
+  position: absolute;
+  top: .6875rem;
+  left: -.0625rem;
+  width: .25rem;
+  height: .375rem;
+  border-radius: 0 0 .1875rem .1875rem;
+  border-left: solid .0625rem currentColor;
+  border-right: solid .0625rem currentColor;
+  border-bottom: solid .0625rem currentColor;
+}
+
+.paperclip.icon:after {
+  content: '';
+  position: absolute;
+  left: .0625rem;
+  top: .0625rem;
+  width: .125rem;
+  height: .625rem;
+  border-radius: .25rem .25rem 0 0;
+  border-left: solid .0625rem currentColor;
+  border-right: solid .0625rem currentColor;
+  border-top: solid .0625rem currentColor;
+}
+
+.listItem {
+  width: 27rem;
+  background: white;
+  list-style: none;
+  margin: .3rem 0;
+  padding: .3rem;
+  border: .0625rem solid;
+  border-radius: .1875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+
+  #newText {
+    width: 11rem;
+  }
+
+  .listItem {
+    width: 13rem;
+    margin: .1rem 0;
+    padding: .2rem;
+    font-size: .5rem;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  #newText {
+    width: 15rem;
+  }
+
+  .listItem {
+    width: 17rem;
+    margin: .2rem 0;
+    padding: .2rem;
+    font-size: .8rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #newText {
+    width: 17rem;
+  }
+
+  .listItem {
+    width: 19rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  #newText {
+    width: 25rem;
+  }
+
+  .listItem {
+    width: 27rem;
+  }
+}
