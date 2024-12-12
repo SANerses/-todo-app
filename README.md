@@ -1,9 +1,6 @@
 # Todo List
 **TodoList application for adding, removing and editing todo items
 
-## Directory
-`cd projects/TODO`
-
 ## Project Specifications
 
 1. **Integrate JavaScript**
